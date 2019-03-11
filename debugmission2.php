@@ -41,7 +41,7 @@ class MechaDog extends Dog
     $path = explode("/", explode(" ", $arg)[0]);
     var_dump($path);
       // この変数の内容が「[0]=> string(3) "GET"」になっているが、
-      //「[0]=> string(0) "" [1]=> string(3) "bsb"」になるべき
+      //「[0]=> string(0) "" [1]=> string(3) "bsd"」になるべき
     array_shift($path);
 
     if( is_null($path) ) {
@@ -61,7 +61,7 @@ class MechaDog extends Dog
     else {
       var_dump('----------7-----------');
       var_dump($path);
-      //この変数の内容が空の配列になっているので、「[0]=> string(3) "bsb"」になるべき
+      //この変数の内容が空の配列になっているので、「[0]=> string(3) "bsd"」になるべき
       echo $path[0] . "=>" . $this->data[$path[0]] . PHP_EOL;
       //中身が空の配列になっているので、「=>」と出力される。値を入れて「bsd=>mit」になるべき
     }
